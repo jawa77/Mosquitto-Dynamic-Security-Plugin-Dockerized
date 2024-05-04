@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  mosquitto:
+    container_name: "mosquitto.myservice.com"
+    build:
+      context: ./mosquitto
+      dockerfile: Dockerfile
+    image: "mosquitto:selfmade.ninja:v1.0"  # Tagged with a version
+    restart: unless-stopped
+    ports:
+      - "1884:1883"
+      - "9002:9001"
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+    networks:
+      - frontend
+
+networks:
+  frontend:
+    driver: bridge

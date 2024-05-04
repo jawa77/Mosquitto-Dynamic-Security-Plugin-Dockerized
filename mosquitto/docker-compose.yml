@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  mosquitto:
+    build: .
+    container_name: mosquitto
+    volumes:
+      - ./data:/mosquitto/data
+      - ./log:/mosquitto/log
+      - ./config:/mosquitto/config
+    ports:
+      - "1884:1883"
+    restart: unless-stopped
+
