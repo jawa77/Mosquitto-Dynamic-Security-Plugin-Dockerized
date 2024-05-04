@@ -62,22 +62,22 @@ docker exec -it container-id /mosquitto/data/createUser.sh username password
 
 - **Delete User:**
 ```
-docker exec -it mosquitto.selfmade.ninja /bin/bash /mosquitto/data/delclient.sh username
+docker exec -it mosquitto.myservice.com /bin/bash /mosquitto/data/delclient.sh username
 ```
 
 - **Add Topic:**
 ```
-docker exec -it mosquitto.selfmade.ninja /bin/bash /mosquitto/data/addTopic.sh username acl topic
+docker exec -it mosquitto.myservice.com /bin/bash /mosquitto/data/addTopic.sh username acl topic
 ```
 
 - **Remove Topic:**
 ```
-docker exec -it mosquitto.selfmade.ninja /bin/bash /mosquitto/data/removeTop.sh username acl topic
+docker exec -it mosquitto.myservice.com /bin/bash /mosquitto/data/removeTop.sh username acl topic
 ```
 
 - **Change Password:**
 ```
-docker exec -it mosquitto /bin/bash /mosquitto/data/passchange.sh username new_password
+docker exec -it mosquitto.myservice.com /bin/bash /mosquitto/data/passchange.sh username new_password
 ```
 
 ## Python Controller
