@@ -37,6 +37,7 @@ Update the ports according to your requirements.
 6. **Start Containers using Docker Compose:**
 
 ```
+docker compose build
 docker-compose up -d
 ```
 
